@@ -1,0 +1,6 @@
+framework module Pods_cellular {
+  umbrella header "Pods-cellular-umbrella.h"
+
+  export *
+  module * { export * }
+}

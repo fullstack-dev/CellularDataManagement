@@ -29,4 +29,9 @@ target 'cellular' do
   # For Swift 3 (no longer maintained), use:
   # pod 'SideMenu', '~> 2.3.4'
 
+  use_frameworks!
+  pod 'PieCharts'
+
+  pod 'Charts'
+
 end

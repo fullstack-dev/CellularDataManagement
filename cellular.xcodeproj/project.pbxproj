@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1475A850C94648F9B4E8392C /* Pods_cellularUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F2159DF5574AB5397AE781 /* Pods_cellularUITests.framework */; };
 		6576B38C14E72A413EC1860B /* Pods_cellular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FE1161D056DC0B2316E259 /* Pods_cellular.framework */; };
+		7D0AE708223B632F009D17CF /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE707223B632F009D17CF /* MainMenuVC.swift */; };
+		7D0AE70A223B6E2E009D17CF /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE709223B6E2E009D17CF /* HelpVC.swift */; };
+		7D0AE70C223B6E4B009D17CF /* GetFullVersionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE70B223B6E4B009D17CF /* GetFullVersionVC.swift */; };
+		7D0AE70E223B6E6B009D17CF /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE70D223B6E6B009D17CF /* AboutUsVC.swift */; };
+		7D0AE710223B6E7E009D17CF /* WeeklyPerformanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE70F223B6E7D009D17CF /* WeeklyPerformanceVC.swift */; };
+		7D0AE712223B8580009D17CF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D0AE711223B8580009D17CF /* back.png */; };
+		7D0AE716223BCB73009D17CF /* PieCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0AE715223BCB73009D17CF /* PieCharts.framework */; };
+		7D0AE718223BCB7B009D17CF /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0AE717223BCB7B009D17CF /* Charts.framework */; };
+		7D0AE71A223BD157009D17CF /* ChartBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AE719223BD157009D17CF /* ChartBaseViewController.swift */; };
 		7D134087222FB7EE008EE59D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D134086222FB7EE008EE59D /* AppDelegate.swift */; };
 		7D134089222FB7EE008EE59D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D134088222FB7EE008EE59D /* ViewController.swift */; };
 		7D13408C222FB7EE008EE59D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D13408A222FB7EE008EE59D /* Main.storyboard */; };
@@ -48,6 +57,15 @@
 		07990F7F03BD64017E275EFE /* Pods-cellularUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellularUITests.release.xcconfig"; path = "Target Support Files/Pods-cellularUITests/Pods-cellularUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2BD4FDE00CA26B75DF8E57E4 /* Pods-cellularTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellularTests.release.xcconfig"; path = "Target Support Files/Pods-cellularTests/Pods-cellularTests.release.xcconfig"; sourceTree = "<group>"; };
 		72C11C728E1916767016529B /* Pods-cellularUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellularUITests.debug.xcconfig"; path = "Target Support Files/Pods-cellularUITests/Pods-cellularUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D0AE707223B632F009D17CF /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		7D0AE709223B6E2E009D17CF /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		7D0AE70B223B6E4B009D17CF /* GetFullVersionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFullVersionVC.swift; sourceTree = "<group>"; };
+		7D0AE70D223B6E6B009D17CF /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		7D0AE70F223B6E7D009D17CF /* WeeklyPerformanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPerformanceVC.swift; sourceTree = "<group>"; };
+		7D0AE711223B8580009D17CF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		7D0AE715223BCB73009D17CF /* PieCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PieCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0AE717223BCB7B009D17CF /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0AE719223BD157009D17CF /* ChartBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartBaseViewController.swift; sourceTree = "<group>"; };
 		7D134083222FB7EE008EE59D /* cellular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D134086222FB7EE008EE59D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D134088222FB7EE008EE59D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0AE718223BCB7B009D17CF /* Charts.framework in Frameworks */,
+				7D0AE716223BCB73009D17CF /* PieCharts.framework in Frameworks */,
 				6576B38C14E72A413EC1860B /* Pods_cellular.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +128,8 @@
 		2B5193C1AB284FD7D92E3608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D0AE717223BCB7B009D17CF /* Charts.framework */,
+				7D0AE715223BCB73009D17CF /* PieCharts.framework */,
 				F8FE1161D056DC0B2316E259 /* Pods_cellular.framework */,
 				990C77801576DA50D32665C5 /* Pods_cellularTests.framework */,
 				F0F2159DF5574AB5397AE781 /* Pods_cellularUITests.framework */,
@@ -125,7 +147,6 @@
 				72C11C728E1916767016529B /* Pods-cellularUITests.debug.xcconfig */,
 				07990F7F03BD64017E275EFE /* Pods-cellularUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,11 +178,17 @@
 				7D277C672231165E0040D39F /* Resources */,
 				7D134086222FB7EE008EE59D /* AppDelegate.swift */,
 				7D134088222FB7EE008EE59D /* ViewController.swift */,
+				7D0AE707223B632F009D17CF /* MainMenuVC.swift */,
+				7D0AE709223B6E2E009D17CF /* HelpVC.swift */,
+				7D0AE70D223B6E6B009D17CF /* AboutUsVC.swift */,
+				7D0AE70F223B6E7D009D17CF /* WeeklyPerformanceVC.swift */,
+				7D0AE70B223B6E4B009D17CF /* GetFullVersionVC.swift */,
 				7D13408A222FB7EE008EE59D /* Main.storyboard */,
 				7D134090222FB7EF008EE59D /* Assets.xcassets */,
 				7D134092222FB7EF008EE59D /* LaunchScreen.storyboard */,
 				7D134095222FB7EF008EE59D /* Info.plist */,
 				7D13408D222FB7EE008EE59D /* cellular.xcdatamodeld */,
+				7D0AE719223BD157009D17CF /* ChartBaseViewController.swift */,
 			);
 			path = cellular;
 			sourceTree = "<group>";
@@ -187,6 +214,7 @@
 		7D277C672231165E0040D39F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D0AE711223B8580009D17CF /* back.png */,
 				7D2C379B2232A08600D24CA5 /* helpw.png */,
 				7D277C7A2231659C0040D39F /* hamburger.png */,
 				7D277C722231623C0040D39F /* startBtn.png */,
@@ -313,6 +341,7 @@
 				7D277C782231623C0040D39F /* startBtn@2x.png in Resources */,
 				7D277C792231623C0040D39F /* stopBtn@2x.png in Resources */,
 				7D2C379C2232A08600D24CA5 /* helpw.png in Resources */,
+				7D0AE712223B8580009D17CF /* back.png in Resources */,
 				7D134091222FB7EF008EE59D /* Assets.xcassets in Resources */,
 				7D277C772231623C0040D39F /* stopBtn.png in Resources */,
 				7D13408C222FB7EE008EE59D /* Main.storyboard in Resources */,
@@ -411,12 +440,16 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-cellular/Pods-cellular-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/PieCharts/PieCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PieCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,8 +464,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0AE710223B6E7E009D17CF /* WeeklyPerformanceVC.swift in Sources */,
 				7D13408F222FB7EE008EE59D /* cellular.xcdatamodeld in Sources */,
+				7D0AE70C223B6E4B009D17CF /* GetFullVersionVC.swift in Sources */,
+				7D0AE70A223B6E2E009D17CF /* HelpVC.swift in Sources */,
+				7D0AE70E223B6E6B009D17CF /* AboutUsVC.swift in Sources */,
+				7D0AE71A223BD157009D17CF /* ChartBaseViewController.swift in Sources */,
 				7D134089222FB7EE008EE59D /* ViewController.swift in Sources */,
+				7D0AE708223B632F009D17CF /* MainMenuVC.swift in Sources */,
 				7D134087222FB7EE008EE59D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

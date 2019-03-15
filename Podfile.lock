@@ -1,16 +1,26 @@
 PODS:
+  - Charts (3.2.2):
+    - Charts/Core (= 3.2.2)
+  - Charts/Core (3.2.2)
+  - PieCharts (0.0.7)
   - SideMenu (5.0.3)
 
 DEPENDENCIES:
+  - Charts
+  - PieCharts
   - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Charts
+    - PieCharts
     - SideMenu
 
 SPEC CHECKSUMS:
+  Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  PieCharts: 30e50dfa7dc19e5b84e9878d32089673ef5d0453
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: b935636d30ddf5e0abb52f0948f13a81a2e0c3a2
+PODFILE CHECKSUM: 50624dd6a129f41c8a27893ad38e0ed1e7405ec0
 
 COCOAPODS: 1.6.1

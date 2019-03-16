@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var help: UIButton!
+    @IBOutlet weak var displayOnOff: UILabel!
     
     var bubbleSound: SystemSoundID!
     
@@ -100,31 +101,35 @@ class ViewController: UIViewController {
     
     @IBAction func stopBtnActioin(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Alert", message: "Stop Managing Data", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
+        self.removeHighlightLabel(label: displayOnOff)
         
     }
     
     @IBAction func startBtnAction(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Alert", message: "Start Managing Data", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true)
+        self.highlightLabel(label: displayOnOff)
         
     }
     
     @IBAction func helpBtnAction(_ sender: Any) {
     }
-
-    @IBAction func on_offBtnAction(_ sender: Any) {
+    
+    // When focussed - show gray border
+    func highlightLabel(label: UILabel){
+        label.layer.borderColor = UIColor.lightGray.cgColor
+        label.layer.borderWidth = 1
+        label.layer.cornerRadius = 4
+        label.layer.backgroundColor = UIColor.lightGray.cgColor
     }
+    
+    // Label is NOT empty - show gray border with 0 border width
+    func removeHighlightLabel(label: UILabel){
+        label.layer.borderColor = UIColor.yellow.cgColor
+        label.layer.borderWidth = 0
+        label.layer.cornerRadius = 4
+        label.layer.backgroundColor = UIColor.clear.cgColor
+    }
+    
 }
 
 extension ViewController: UISideMenuNavigationControllerDelegate {

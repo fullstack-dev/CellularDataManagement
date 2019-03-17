@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var help: UIButton!
-    @IBOutlet weak var displayOnOff: UILabel!
+    @IBOutlet weak var displayOn: UILabel!
+    @IBOutlet weak var displayOff: UILabel!
     
     var bubbleSound: SystemSoundID!
     
@@ -26,6 +27,9 @@ class ViewController: UIViewController {
     let defaultDurationStop = 2.5
     let defaultDampingStop = 0.25
     let defaultVelocityStop = 5.4
+    
+    var wifiC: UInt64 = 0
+    var wwanC: UInt64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,33 +105,41 @@ class ViewController: UIViewController {
     
     @IBAction func stopBtnActioin(_ sender: Any) {
         
-        self.removeHighlightLabel(label: displayOnOff)
+        self.highlightOn(label: displayOff)
+        self.highlightOff(label: displayOn)
         
     }
     
     @IBAction func startBtnAction(_ sender: Any) {
         
-        self.highlightLabel(label: displayOnOff)
+        self.highlightOn(label: displayOn)
+        self.highlightOff(label: displayOff)
         
+        wifiC = SystemDataUsage.wifiCompelete
+        wwanC = SystemDataUsage.wwanCompelete
+        print("wifiC: ",wifiC)
+        print("wwanC: ", wwanC)
     }
     
     @IBAction func helpBtnAction(_ sender: Any) {
     }
     
     // When focussed - show gray border
-    func highlightLabel(label: UILabel){
-        label.layer.borderColor = UIColor.lightGray.cgColor
+    func highlightOn(label: UILabel){
+        label.layer.borderColor = UIColor.white.cgColor
         label.layer.borderWidth = 1
         label.layer.cornerRadius = 4
-        label.layer.backgroundColor = UIColor.lightGray.cgColor
+        label.layer.backgroundColor = UIColor.white.cgColor
+        label.textColor = UIColor(red: 0.27, green: 0.27, blue: 0.27, alpha: 1.0)
     }
     
     // Label is NOT empty - show gray border with 0 border width
-    func removeHighlightLabel(label: UILabel){
-        label.layer.borderColor = UIColor.yellow.cgColor
+    func highlightOff(label: UILabel){
+        label.layer.borderColor = UIColor.clear.cgColor
         label.layer.borderWidth = 0
         label.layer.cornerRadius = 4
         label.layer.backgroundColor = UIColor.clear.cgColor
+        label.textColor = UIColor.white
     }
     
 }

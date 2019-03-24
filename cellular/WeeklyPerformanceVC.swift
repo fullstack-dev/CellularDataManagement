@@ -14,8 +14,9 @@ class WeeklyPerformanceVC: ChartBaseViewController {
     
     @IBOutlet weak var chartView: PieChartView!
     
-    let sliderXValue = 2
-    let sliderYValue = 100
+    var sliderXValue = 2
+    var sliderYValue = 70
+    let global = Global()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,18 +70,24 @@ class WeeklyPerformanceVC: ChartBaseViewController {
             return
         }
         
-        self.setDataCount(Int(sliderXValue), range: UInt32(sliderYValue))
+        sliderXValue = GlobalArray.wifiArray.count
+        
+        self.setDataCount(Int(sliderXValue), range: UInt64(sliderYValue))
     }
     
-    func setDataCount(_ count: Int, range: UInt32) {
+    func setDataCount(_ count: Int, range: UInt64) {
         let entries = (0..<count).map { (i) -> PieChartDataEntry in
             // IMPORTANT: In a PieChart, no values (Entry) should have the same xIndex (even if from different DataSets), since no values can be drawn above each other.
-            return PieChartDataEntry(value: Double(arc4random_uniform(range) + range / 5),
-                                     label: parties[i % parties.count],
+//            return PieChartDataEntry(value: Double(arc4random_uniform(range) + range / 5),
+//                                     label: parties[i % parties.count],
+//                                     icon: nil)
+            return PieChartDataEntry(value: Double(GlobalArray.wifiArray[i]),
+                                     label: "\(GlobalArray.timeArray[i])-\(GlobalArray.wifiByteArray[i])",
                                      icon: nil)
         }
         
-        let set = PieChartDataSet(values: entries, label: "Election Results")
+//        let set = PieChartDataSet(values: entries, label: "Election Results")
+        let set = PieChartDataSet(values: entries, label: "")
         set.drawIconsEnabled = false
         set.sliceSpace = 2
         

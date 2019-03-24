@@ -35,6 +35,7 @@
 		7D2C379C2232A08600D24CA5 /* helpw.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D2C379B2232A08600D24CA5 /* helpw.png */; };
 		7D6157B1223D3C940069CB15 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6157B0223D3C930069CB15 /* logo.jpg */; };
 		7D6157B3223D5B8F0069CB15 /* SystemDataUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6157B2223D5B8F0069CB15 /* SystemDataUsage.swift */; };
+		7D937FC22247B9E80025B5C8 /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D937FC12247B9E80025B5C8 /* Variables.swift */; };
 		C232F358151E70429F27B9A6 /* Pods_cellularTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990C77801576DA50D32665C5 /* Pods_cellularTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		7D2C379B2232A08600D24CA5 /* helpw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpw.png; sourceTree = "<group>"; };
 		7D6157B0223D3C930069CB15 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		7D6157B2223D5B8F0069CB15 /* SystemDataUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDataUsage.swift; sourceTree = "<group>"; };
+		7D937FC12247B9E80025B5C8 /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variables.swift; sourceTree = "<group>"; };
 		990C77801576DA50D32665C5 /* Pods_cellularTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cellularTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76FDF883DF1A7E12E4DA4F1 /* Pods-cellular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellular.debug.xcconfig"; path = "Target Support Files/Pods-cellular/Pods-cellular.debug.xcconfig"; sourceTree = "<group>"; };
 		BCD2F38A81578B7A4F9448D0 /* Pods-cellularTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellularTests.debug.xcconfig"; path = "Target Support Files/Pods-cellularTests/Pods-cellularTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				7D134092222FB7EF008EE59D /* LaunchScreen.storyboard */,
 				7D134095222FB7EF008EE59D /* Info.plist */,
 				7D13408D222FB7EE008EE59D /* cellular.xcdatamodeld */,
+				7D937FC12247B9E80025B5C8 /* Variables.swift */,
 			);
 			path = cellular;
 			sourceTree = "<group>";
@@ -304,6 +307,11 @@
 				TargetAttributes = {
 					7D134082222FB7EE008EE59D = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7D134099222FB7EF008EE59D = {
 						CreatedOnToolsVersion = 10.0;
@@ -478,6 +486,7 @@
 				7D0AE70A223B6E2E009D17CF /* HelpVC.swift in Sources */,
 				7D0AE70E223B6E6B009D17CF /* AboutUsVC.swift in Sources */,
 				7D0AE71A223BD157009D17CF /* ChartBaseViewController.swift in Sources */,
+				7D937FC22247B9E80025B5C8 /* Variables.swift in Sources */,
 				7D134089222FB7EE008EE59D /* ViewController.swift in Sources */,
 				7D0AE708223B632F009D17CF /* MainMenuVC.swift in Sources */,
 				7D134087222FB7EE008EE59D /* AppDelegate.swift in Sources */,

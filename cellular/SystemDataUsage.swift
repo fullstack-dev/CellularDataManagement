@@ -14,6 +14,14 @@ extension SystemDataUsage {
         return SystemDataUsage.getDataUsage().wifiSent + SystemDataUsage.getDataUsage().wifiReceived
     }
     
+    public static var wifiSentAmount: UInt64 {
+        return SystemDataUsage.getDataUsage().wifiSent
+    }
+    
+    public static var wifiReceivedAmount: UInt64 {
+        return SystemDataUsage.getDataUsage().wifiReceived
+    }
+    
     public static var wwanCompelete: UInt64 {
         return SystemDataUsage.getDataUsage().wirelessWanDataSent + SystemDataUsage.getDataUsage().wirelessWanDataReceived
     }

@@ -28,15 +28,17 @@ class ViewController: UIViewController {
     let defaultDampingStop = 0.25
     let defaultVelocityStop = 5.4
     
-    var wifiC: UInt64 = 0
-    var wwanC: UInt64 = 0
+//    var wifiC: UInt64 = 0
+//    var wwanC: UInt64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bubbleSound = createBubbleSound()
+        //bubbleSound = createBubbleSound()
         animateStartButton()
         animateStopButton()
+        self.highlightOn(label: displayOff)
+        self.highlightOff(label: displayOn)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +63,7 @@ class ViewController: UIViewController {
     
     // ⬇︎⬇︎⬇︎ animation happens here ⬇︎⬇︎⬇︎
     func animateStartButton() {
-        AudioServicesPlaySystemSound(bubbleSound)
+        //AudioServicesPlaySystemSound(bubbleSound)
         startBtn.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
         UIView.animate(withDuration: defaultDurationStart,
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
     }
     
     func animateStopButton() {
-        AudioServicesPlaySystemSound(bubbleSound)
+        //AudioServicesPlaySystemSound(bubbleSound)
         stopBtn.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         
         UIView.animate(withDuration: defaultDurationStop,
@@ -115,10 +117,15 @@ class ViewController: UIViewController {
         self.highlightOn(label: displayOn)
         self.highlightOff(label: displayOff)
         
-        wifiC = SystemDataUsage.wifiCompelete
-        wwanC = SystemDataUsage.wwanCompelete
-        print("wifiC: ",wifiC)
-        print("wwanC: ", wwanC)
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (t) in
+            print("It's been 10 seconds.")
+            var wifiC: UInt64 = 0
+            var wwanC: UInt64 = 0
+            wifiC = SystemDataUsage.wifiCompelete
+            wwanC = SystemDataUsage.wwanCompelete
+            let usageString = ByteCountFormatter.string(fromByteCount: Int64(wifiC), countStyle: .binary)
+            print("\(usageString) of wifi")
+        }
     }
     
     @IBAction func helpBtnAction(_ sender: Any) {
@@ -147,19 +154,19 @@ class ViewController: UIViewController {
 extension ViewController: UISideMenuNavigationControllerDelegate {
     
     func sideMenuWillAppear(menu: UISideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appearing! (animated: \(animated))")
+//        print("SideMenu Appearing! (animated: \(animated))")
     }
     
     func sideMenuDidAppear(menu: UISideMenuNavigationController, animated: Bool) {
-        print("SideMenu Appeared! (animated: \(animated))")
+//        print("SideMenu Appeared! (animated: \(animated))")
     }
     
     func sideMenuWillDisappear(menu: UISideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappearing! (animated: \(animated))")
+//        print("SideMenu Disappearing! (animated: \(animated))")
     }
     
     func sideMenuDidDisappear(menu: UISideMenuNavigationController, animated: Bool) {
-        print("SideMenu Disappeared! (animated: \(animated))")
+//        print("SideMenu Disappeared! (animated: \(animated))")
     }
     
 }

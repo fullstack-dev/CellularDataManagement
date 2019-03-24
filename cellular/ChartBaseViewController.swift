@@ -178,8 +178,10 @@ class ChartBaseViewController: UIViewController, ChartViewDelegate {
     func setup(pieChartView chartView: PieChartView) {
         chartView.usePercentValuesEnabled = true
         chartView.drawSlicesUnderHoleEnabled = false
-        chartView.holeRadiusPercent = 0.58
-        chartView.transparentCircleRadiusPercent = 0.61
+//        chartView.holeRadiusPercent = 0.58
+//        chartView.transparentCircleRadiusPercent = 0.61
+        chartView.holeRadiusPercent = 0
+        chartView.transparentCircleRadiusPercent = 0
         chartView.chartDescription?.enabled = false
         chartView.setExtraOffsets(left: 5, top: 10, right: 5, bottom: 5)
         
@@ -189,14 +191,14 @@ class ChartBaseViewController: UIViewController, ChartViewDelegate {
         paragraphStyle.lineBreakMode = .byTruncatingTail
         paragraphStyle.alignment = .center
         
-        let centerText = NSMutableAttributedString(string: "Charts\nby Daniel Cohen Gindi")
-        centerText.setAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 13)!,
-                                  .paragraphStyle : paragraphStyle], range: NSRange(location: 0, length: centerText.length))
-        centerText.addAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 11)!,
-                                  .foregroundColor : UIColor.gray], range: NSRange(location: 10, length: centerText.length - 10))
-        centerText.addAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 11)!,
-                                  .foregroundColor : UIColor(red: 51/255, green: 181/255, blue: 229/255, alpha: 1)], range: NSRange(location: centerText.length - 19, length: 19))
-        chartView.centerAttributedText = centerText;
+//        let centerText = NSMutableAttributedString(string: "Charts\nby Cellular Data daily Usage")
+//        centerText.setAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 13)!,
+//                                  .paragraphStyle : paragraphStyle], range: NSRange(location: 0, length: centerText.length))
+//        centerText.addAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 11)!,
+//                                  .foregroundColor : UIColor.gray], range: NSRange(location: 10, length: centerText.length - 10))
+//        centerText.addAttributes([.font : UIFont(name: "HelveticaNeue-Light", size: 11)!,
+//                                  .foregroundColor : UIColor(red: 51/255, green: 181/255, blue: 229/255, alpha: 1)], range: NSRange(location: centerText.length - 19, length: 19))
+//        chartView.centerAttributedText = centerText;
         
         chartView.drawHoleEnabled = true
         chartView.rotationAngle = 0

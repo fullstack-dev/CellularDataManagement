@@ -8,15 +8,98 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+//    let center = UNUserNotificationCenter.current()
 
-
+    var wifiC: UInt64 = 0
+    var wifiArray: [UInt64] = []
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch.let session = AVAudioSession.sharedInstance()
+//        let options: UNAuthorizationOptions = [.alert, .sound];
+//
+//        center.requestAuthorization(options: options) { (granted, error) in
+//            if !granted {
+//                print("Something went wrong")
+//            }
+//        }
+//
+//        let content = UNMutableNotificationContent()
+//        content.title = "Don't forget"
+//        content.body = "Buy some milk"
+//        content.sound = UNNotificationSound.default
+//
+//        //Time interval: Schedule a notification for a number of seconds later.
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        
+//        //Calendar: Trigger at a specific date and time.
+//        let date = Date(timeIntervalSinceNow: 3600)
+//        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//
+//        //To create the trigger from the date components:
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+//
+//        //To create a trigger that repeats at a certain interval use the correct set of date components.
+//        let triggerDaily = Calendar.current.dateComponents([hour, .minute, .second], from: date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+//
+//        //To have it repeat weekly at the same time we also need the weekday:
+//        let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+        
+//        let identifier = "UYLLocalNotification"
+//        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+//
+//        center.add(request, withCompletionHandler: { (error) in
+//            if error != nil {
+//                // Something went wrong
+//                print("Something went wrong: ",error!);
+//            }
+//        })
+        
+        
+        
+        let global = Global()
+        
+        let currentDateTime = Date()
+        
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+//        formatter.dateStyle = .long
+        
+        global.wifiC = SystemDataUsage.wifiCompelete
+        GlobalArray.wifiArray.append(global.wifiC)
+        GlobalArray.timeArray.append(formatter.string(from: currentDateTime))
+        
+        let usageString = ByteCountFormatter.string(fromByteCount: Int64(global.wifiC), countStyle: .binary)
+        GlobalArray.wifiByteArray.append(usageString)
+        print("\(usageString) of wifi")
+        print("array: ", GlobalArray.wifiArray, GlobalArray.timeArray)
+        
+//        Timer.scheduledTimer(withTimeInterval: 86400, repeats: true) { (t) in
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (t) in
+
+            let currentDateTime = Date()
+            
+            let formatter = DateFormatter()
+            formatter.timeStyle = .medium
+//            formatter.dateStyle = .long
+            
+            global.wifiC = SystemDataUsage.wifiCompelete
+            GlobalArray.wifiArray.append(global.wifiC)
+            GlobalArray.timeArray.append(formatter.string(from: currentDateTime))
+            
+            let usageString = ByteCountFormatter.string(fromByteCount: Int64(global.wifiC), countStyle: .binary)
+            GlobalArray.wifiByteArray.append(usageString)
+            print("\(usageString) of wifi")
+            print("array: ", GlobalArray.wifiArray, GlobalArray.timeArray)
+        }
         return true
     }
 
